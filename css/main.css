@@ -1,3 +1,39 @@
-div {
-	color: white;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #222222;
+}
+
+#edit>* {
+	display: block;
+}
+
+#cdw {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#cdw>* {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: inherit;
+	height: inherit;
+}
+
+#cdw-background {
+	background-image: url(../img/background.png);
+	background-size: 100%;
+}
+
+#cdw-foreground {
+	background-image: url(../img/foreground.png);
+	background-size: 100%;
 }
