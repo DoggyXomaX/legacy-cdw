@@ -35,7 +35,7 @@ class App {
   imageScale: number = 3;
   editFrame: EditFrame;
   cdwFrame: CDWFrame;
-  opacity: number;
+  opacity: number = 1;
   timer: TimeoutId;
   fullTime: TimeoutId;
   opacityUpdater: IntervalId;
@@ -44,8 +44,6 @@ class App {
   readonly FullDelay: number = 14000;
   readonly OpacityIntervalDelay: number = 100;
   readonly OpacityDelta: number = 0.05;
-
-  constructor() { }
 
   Init() {
     this.editFrame = new EditFrame('edit', 'edit-file', 'edit-button');
