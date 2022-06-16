@@ -84,8 +84,8 @@ class App {
     this.fullTime = setTimeout(() => this.FullEnd(), this.FullDelay);
     this.cdwFrame.image.style.opacity = `${this.opacity}`;
 
-    this.editFrame.element.hidden = true;
-    this.cdwFrame.element.hidden = false;
+    this.editFrame.element.style.display = 'none';
+    this.cdwFrame.element.style.display = 'block';
 
     this.cdwFrame.audio.currentTime = 0;
     this.cdwFrame.audio.play();
@@ -106,8 +106,8 @@ class App {
 
   FullEnd() {
     this.cdwFrame.audio.pause();
-    this.cdwFrame.element.hidden = true;
-    this.editFrame.element.hidden = false;
+    this.cdwFrame.element.style.display = 'none';
+    this.editFrame.element.style.display = 'flex';
   }
 }
 

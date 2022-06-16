@@ -9,8 +9,42 @@ body {
 	background-color: #222222;
 }
 
+#edit {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+
+	position: absolute;
+	padding: 16px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	background-color: white;
+	border-radius: 16px;
+}
+
 #edit>* {
 	display: block;
+}
+
+#edit>h1 {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid gray;
+
+	text-align: center;
+	font-weight: bold;
+}
+
+#edit>button {
+	cursor: pointer;
+	margin-top: 8px;
+	padding: 8px;
+}
+
+#edit>input {
+	margin: 8px 0;
 }
 
 #cdw {
