@@ -37,7 +37,7 @@ class App {
   cdwFrame: CDWFrame;
   opacity: number = 1;
   timer: TimeoutId;
-  fullTime: TimeoutId;
+  fullTimer: TimeoutId;
   opacityUpdater: IntervalId;
 
   readonly WaitDelay: number = 7800;
@@ -80,8 +80,13 @@ class App {
     console.log('this:', this);
 
     this.opacity = 1;
+
+    if (this.timer) clearInterval(this.timer);
+    if (this.fullTimer) clearTimeout(this.fullTimer);
+    if (this.opacityUpdater) clearInterval(this.opacityUpdater);
+
     this.timer = setTimeout(() => this.WaitEnd(), this.WaitDelay);
-    this.fullTime = setTimeout(() => this.FullEnd(), this.FullDelay);
+    this.fullTimer = setTimeout(() => this.FullEnd(), this.FullDelay);
     this.cdwFrame.image.style.opacity = `${this.opacity}`;
 
     this.editFrame.element.style.display = 'none';
