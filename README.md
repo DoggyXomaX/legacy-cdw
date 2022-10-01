@@ -1,2 +1,2 @@
 # legacy-cdw
-Page on https://doggyxomax.ru/old/cdw
+Page on https://doggyxomax.ru/old/cdw (unavailable)
